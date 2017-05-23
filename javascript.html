@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+<title> This is my first Javascript </title>
+
+</head>
+<body onload="Area(10,6)">
+
+		<!-- <input type="button" value="click me" onclick="alert('You clicked me')">
+		
+		<form action="test.html" method="get" onsubmit="return"> 
+			
+		</form> 
+		
+		0
+
+		
+
+	<div>
+
+	<img src="Images/port5.png" id="image1">
+
+	</div>
+
+
+	<input type="button" onclick="document.getElementById('image1').src='Images/port1.png'" value='FlipOver' id="testing">
+
+
+	<p id='zz' style="color:red"> This is a message </p>
+
+	<p id='zz' onclick="document.getElementById('')"> This is a message </p>
+
+
+	<input type="button" onclick="document.getElementById('zz').style.border='1px solid green'" value='Register Now' id='testing'>
+
+	
+	<p id="female"> </p>
+
+	<p id="male"> </p>
+
+	<h1 onclick="Magic()"> Magic Function </h1>
+
+	<input type="button" onclick="Area(5,8)" value="Calculator" id="Aarea">
+
+	
+
+	<h1>More aout JS</h1>
+
+	<p id="test" onclick="ChangeMe();">This is me</p> -->
+
+	<h1>Login Form</h1>
+
+	<form action="" method="post">
+
+
+	<input type="text" id="Username"  placeholder="Username"><span id="msg"></span> <br><br>
+
+	<input type="password" id="Pass" placeholder="Password">  <br><br>
+
+
+	<input type="password" id="ConPass" placeholder="Confirm Password">  <br><br>
+
+	<input type="checkbox" id="show" onclick="showPass()">Show Password
+
+	<!--if(this.checked){document.getElementById('pass')else(document.getElementById('pass').type='password'}"-->
+
+	<input type="button" value="Register" id="submit" onclick="validate()">  <br><br>
+
+	  <br><br>
+
+	</form>
+
+	<br><br>
+
+
+	<input type="text" name="firstvalue" id="one" placeholder="firstvalue"> + <input type="text" name="secondvalue" id="two" placeholder="secondvalue"> =
+
+	<input type="text" name="answer" id="Ans" placeholder="Answer">
+
+	<input type="button" name="Addition" id="Add" value="Add both">
+
+
+
+
+	Radius <input type="text" name="" value="" placeholder="enter value" id="rad"> <br>
+
+	<input type="button" name="Calculator" value="Calculate" onclick="calculate()">
+
+	<p id="ans"> </p>
+
+
+	
+
+	<script type="text/javascript" lang="javascript">
+
+	var firstvalue = document.getElementById('one').value;
+
+	var secondvalue = document.getElementById('two').value;
+
+	var total = parseInt(firstvalue) + parseInt(secondvalue);
+
+	document.getElementById('Ans').value=total;
+
+	alert (total);
+
+
+
+
+
+
+	function calculate() {
+
+
+		var Radius = parseInt(document.getElementById('rad').value) * parseInt(document.getElementById('rad').value) * 3.14;
+
+	document.getElementById('ans').innerHTML=Radius;
+
+	}
+
+
+
+
+	
+	function validate() {
+		var Username = document.getElementById('Username').value;
+
+		var Pass = document.getElementById('Pass').value;
+
+		var ConPass = document.getElementById('ConPass').value;
+
+		if (Username =="") {
+			alert ("Please enter username");
+			document.getElementById('pass').style="border:1px solid red";
+			document.getElementById('msg').innerHTML ="Please enter Username";
+		}
+
+		if (Pass ==""){
+			alert ("Please enter Password");
+			ocument.getElementById('pass').style="border:1px solid yellow";
+		}
+
+		if (ConPass ==""){
+			alert ("Please enter Confirm Password");
+		}
+
+		if (Pass != ConPass){
+			alert ("Password Mismatch")
+		}
+
+	}
+
+
+	function showPass() {
+		var chk = document.getElementById('show');
+
+		if (chk.checked) {
+			document.getElementById('Pass').type="text";
+			document.getElementById('Conpass').type="text";
+			}
+		else {
+			document.getElementById('Pass').type = "password";
+			document.getElementById('Conpass').type="password";
+		}		
+	}
+
+
+
+
+
+
+
+
+
+
+	/*function ChangeMe(){
+
+	document.getElementById("test").innerHTML = "New tex!";
+
+	}
+
+	
+
+	function Area(L,B){
+
+
+		var area = L * B;
+
+		alert (area); */
+
+
+	//}
+
+	/*
+
+	function Magic(){
+
+	var x = "female";
+
+	var y = "male";
+
+	var z =  prompt ("What is your Gender","Enter Gender");
+
+	var msg = "";
+
+	if ((z == x) || (z == y)) {
+
+	msg = "Bags and Shoes for sale";
+
+	document.getElementById('male').innerHTML = msg;
+
+	}
+
+	else if ((z == y) || (z == x)) {
+
+	msg = "Jeans for sale";
+
+	document.getElementById('female').innerHTML = msg;
+
+	}
+
+	else {alert ("You're Welcome")}
+
+	}
+
+
+
+		
+
+	var greetings = "";
+
+	var testtime = 12;
+
+	if (testtime . 12) {
+		greetings = "Good afternoon";
+	}
+	else if 
+
+
+
+	 alert ("hello javascript");
+	
+	var x = 100;
+	x = 20
+	alert (x)
+	
+	var fname = "Ola";
+	var surname = "Ade";
+	var fullname = fname + " " + surname;
+	alert (fullname);
+	
+	alert (fname.length);
+	alert (fullname.length);
+	
+	var fullname = "This is my name";
+	
+	//troublshoot code in JS using Inspect element and then go to console or we can write on the console using consol.log
+	
+	console.log (fullname);
+	
+	alert (fullname.slice(2,5));
+	
+	alert (fullname.substring(0,5));
+	
+	alert (fullname.substr(0,7));
+	
+	alert (fullname.toUpperCase());
+	
+	alert (fullname.toLowerCase());  
+	
+	
+	var text1 = "Hello";
+	
+	var text2 = "World";
+	
+	text3 = text1.concat("",text2);
+	
+	alert (text3);
+	
+	confirm ("if you are male");
+	
+	prompt ("How old are you","Please enter your actual age", 18);  
+
+	
+
+	var x = prompt ("Welcome to our Webpage","Enter your name");
+	
+	var y = "Thank you for visiting our Webpage";
+	
+	z = x.concat("",y);
+	
+	alert (z); 
+
+
+
+
+	/*var x = document.getElementsbyId('image1').innerHTML;*/
+
+
+	
+</script>
+</body>
+</html>
